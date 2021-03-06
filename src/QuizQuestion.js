@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import QuizQuestionButton from './QuizQuestionButton';
+import React, { Component } from 'react'
+import QuizQuestionButton from './QuizQuestionButton'
 
 class QuizQuestion extends Component {
-
     constructor(props) {
-        super(props);
-        this.state = { incorrectAnswer: false };
-    }
+        super(props)
 
+        this.state = { incorrectAnswer: false }
+    }
     handleClick(button_text) {
         if (button_text === this.props.quiz_question.answer) {
             this.setState({ incorrectAnswer: false })
@@ -16,7 +15,6 @@ class QuizQuestion extends Component {
             this.setState({ incorrectAnswer: true })
         }
     }
-
     render() {
         return (
             <main>
@@ -33,7 +31,6 @@ class QuizQuestion extends Component {
             </main>
         )
     }
-
 }
 
-export default QuizQuestion;
+export default QuizQuestion
